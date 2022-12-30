@@ -94,14 +94,14 @@ watch(
   { deep: true }
 );
 
-//get the saved value from localstorage when it onmounted
+//get the saved value from localstorage when it onMounted
 onMounted(() => {
   name.value = localStorage.getItem("name") || "";
   todos.value = JSON.parse(localStorage.getItem("todos")) || [];
 });
 
 const addTodo = () => {
-  //return nothing if it empty or null
+  //return nothing if it is empty or null
   if (input_content.value.trim() === "" || input_category.value === null) {
     return;
   }
